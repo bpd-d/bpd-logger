@@ -1,0 +1,56 @@
+{
+  "name": "bpd-logger",
+  "version": "0.1.0",
+  "description": "Simple logger implementation with support for plugins",
+  "main": "./dist/logger.js",
+  "typings": "./dist/logger.d.ts",
+  "files": [
+    "/dist/logger.js",
+    "/dist/logger.js.map",
+    "/dist/logger.min.js",
+    "/dist/logger.min.js.map",
+    "/dist/logger.d.ts",
+    "/dist/esm/logger.js",
+    "/dist/esm/logger.d.ts",
+    "/dist/esm/console/console.js",
+    "/dist/esm/console/console.d.ts"
+  ],
+  "scripts": {
+    "build": "webpack --config webpack.production.js",
+    "build:minify": "webpack --config webpack.build.minify.js",
+    "test": "karma start karma.config.js",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "prod": "npm run build && npm run build:esm && npm run build:minify"
+  },
+  "bugs": {
+    "url": "https://github.com/bpd-d/bpd-logger/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpd-d/bpd-logger.git"
+  },
+  "homepage": "https://github.com/bpd-d/bpd-logger#readme",
+  "keywords": [
+    "bpd",
+    "logger"
+  ],
+  "author": "BP",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.12",
+    "clean-webpack-plugin": "^3.0.0",
+    "dts-bundle": "^0.7.3",
+    "jasmine": "^3.6.1",
+    "karma-typescript": "^5.0.3",
+    "serialize-javascript": ">=2.1.1",
+    "terser-webpack-plugin": "^3.1.0",
+    "typescript-transform-paths": "^1.1.10",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-karma-jasmine": "^4.0.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
