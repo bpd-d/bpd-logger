@@ -1,6 +1,6 @@
 {
 	"name": "bpd-logger",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Simple logger implementation with support for plugins",
 	"main": "./dist/logger.js",
 	"typings": "./dist/logger.d.ts",
@@ -11,8 +11,8 @@
 		"/dist/logger.min.js.map",
 		"/dist/esm/logger.js",
 		"/dist/esm/logger.d.ts",
-		"/dist/esm/console/console.js",
-		"/dist/esm/console/console.d.ts"
+		"/dist/esm/reporters/console.js",
+		"/dist/esm/reporters/console.d.ts"
 	],
 	"scripts": {
 		"build": "webpack --config webpack.production.js",
