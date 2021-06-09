@@ -1,20 +1,16 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/typings",
-        "noImplicitAny": true,
-        "sourceMap": true,
-        "module": "es6",
-        "target": "es6",
-        "jsx": "react",
-        "allowJs": true,
-        "experimentalDecorators": true,
-        "declaration": true
-    },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
-    ]
+	"compilerOptions": {
+		"outDir": "./dist/typings",
+		"noImplicitAny": true,
+		"sourceMap": true,
+		"module": "es6",
+		"target": "es6",
+		"jsx": "react",
+		"allowJs": true,
+		"experimentalDecorators": true,
+		"declaration": true,
+		"esModuleInterop": true
+	},
+	"include": ["src/**/*", "tests"],
+	"exclude": ["node_modules", "**/*.spec.ts"]
 }
