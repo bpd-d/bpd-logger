@@ -66,10 +66,17 @@ export default function ConsoleLoggerReporter(init) {
         const message = buildMessage(log, _setup);
         switch (log.level) {
             case "error":
+            case "exception":
                 console.error(message);
                 break;
             case "warn":
                 console.warn(message);
+                break;
+            case "info":
+                console.info(message);
+                break;
+            case "debug":
+                console.debug(message);
                 break;
             default:
                 console.log(message);
