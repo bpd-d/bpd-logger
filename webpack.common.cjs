@@ -35,12 +35,13 @@ module.exports = {
 		],
 	},
 	resolve: {
-		extensions: [".tsx", ".ts", ".js"],
+		extensions: [".tsx", ".ts", ".js", ".cjs"],
 	},
 	output: {
-		filename: "[name].js",
+		filename: "[name].cjs",
 		path: path.resolve(__dirname, "dist"),
 		libraryTarget: "umd",
+		globalObject: "this",
 		library: "bpdLogger",
 		umdNamedDefine: true,
 	},

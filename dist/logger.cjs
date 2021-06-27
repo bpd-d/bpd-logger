@@ -7,7 +7,7 @@
 		exports["bpdLogger"] = factory();
 	else
 		root["bpdLogger"] = factory();
-})(self, function() {
+})(this, function() {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
@@ -49,11 +49,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  "ConsoleLoggerReporter": () => (/* binding */ src_ConsoleLoggerReporter),
   "PROPERTIES": () => (/* reexport */ PROPERTIES),
   "getLogger": () => (/* reexport */ getLogger),
   "getSetupBuilder": () => (/* reexport */ getSetupBuilder),
   "matchesLevel": () => (/* reexport */ matchesLevel),
-  "parseLogProperty": () => (/* reexport */ logger_parseLogProperty)
+  "parseLogProperty": () => (/* reexport */ parseLogProperty)
 });
 
 ;// CONCATENATED MODULE: ./src/logger.ts
@@ -192,7 +193,7 @@ function setOnSetup(setup, id, value) {
  * @param {LogProperty} prop - log property
  * @returns
  */
-function logger_parseLogProperty(prop) {
+function parseLogProperty(prop) {
     if (typeof prop === "function") {
         return prop();
     }
@@ -418,9 +419,9 @@ function ConsoleLoggerReporter(init) {
 ;// CONCATENATED MODULE: ./src/index.ts
 
 
+const src_ConsoleLoggerReporter = ConsoleLoggerReporter;
 
 /******/ 	return __webpack_exports__;
 /******/ })()
 ;
 });
-//# sourceMappingURL=logger.js.map

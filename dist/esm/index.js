@@ -1,2 +1,3 @@
+import ConsoleReporter from "./reporters/console";
 export * from "./logger";
-export * from "./reporters/console";
+export const ConsoleLoggerReporter = ConsoleReporter;

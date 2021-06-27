@@ -1,22 +1,28 @@
 {
 	"name": "bpd-logger",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Simple logger implementation with support for plugins",
+	"type": "module",
 	"main": "./dist/logger.js",
 	"typings": "./dist/logger.d.ts",
+	"exports": {
+		"import": "./dist/esm/index.js",
+		"require": "./dist/index.cjs"
+	},
 	"files": [
-		"/dist/logger.js",
-		"/dist/logger.js.map",
+		"/dist/logger.cjs",
 		"/dist/logger.min.js",
 		"/dist/logger.min.js.map",
+		"/dist/esm/index.js",
+		"/dist/esm/index.d.ts",
 		"/dist/esm/logger.js",
 		"/dist/esm/logger.d.ts",
 		"/dist/esm/reporters/console.js",
 		"/dist/esm/reporters/console.d.ts"
 	],
 	"scripts": {
-		"build": "webpack --config webpack.production.js",
-		"build:minify": "webpack --config webpack.build.minify.js",
+		"build": "webpack --config webpack.production.cjs",
+		"build:minify": "webpack --config webpack.build.minify.cjs",
 		"test": "jest",
 		"build:esm": "tsc -p tsconfig.esm.json",
 		"prod": "npm run build && npm run build:esm && npm run build:minify"
